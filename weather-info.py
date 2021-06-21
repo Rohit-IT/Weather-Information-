@@ -1,6 +1,9 @@
+import sys 
 import requests
 #import os
 from datetime import datetime
+
+
 
 api_key = '87d845b0b6cf29baa1a73cc34b067a95'
 location = input("Enter the city name: ")
@@ -16,6 +19,8 @@ hmdt = api_data['main']['humidity']
 wind_spd = api_data['wind']['speed']
 date_time = datetime.now().strftime("%d %b %Y | %I:%M:%S %p")
 
+stdoutOrigin=sys.stdout 
+sys.stdout = open("log.txt", "w")
 print ("-------------------------------------------------------------")
 print ("Weather Stats for - {}  || {}".format(location.upper(), date_time))
 print ("-------------------------------------------------------------")
@@ -24,3 +29,5 @@ print ("Current temperature is: {:.2f} deg C".format(temp_city))
 print ("Current weather desc  :",weather_desc)
 print ("Current Humidity      :",hmdt, '%')
 print ("Current wind speed    :",wind_spd ,'kmph')
+sys.stdout.close()
+sys.stdout=stdoutOrigin
