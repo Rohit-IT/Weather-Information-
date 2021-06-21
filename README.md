@@ -1,8 +1,11 @@
 # Weather-Information-
 Fetching  Weather Information with a Third Party API using Python &amp; Logging the information in a Text File.
 
-Sample Output :
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
+
+Sample Output :
 -------------------------------------------------------------
 Weather Stats for - PUNE  || 21 Jun 2021 | 09:29:19 PM
 -------------------------------------------------------------
